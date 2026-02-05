@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="card-inner" id="cardInner">
+
+                <div class="card-front">
+
+                    <svg class="chip" width="50" height="35">
+                        <rect width="50" height="35" rx="6" fill="#d4af37" />
+                    </svg>
+
+                    <div class="card-number" id="cardNumber">
+                        XXXX XXXX XXXX XXXX
+                    </div>
+
+                    <div class="card-details">
+                        <div class="card-holder" id="cardHolder">NAME ON CARD</div>
+                        <div class="card-expiry" id="cardExpiry">MM/YY</div>
+                    </div>
+
+                </div>
+
+                <div class="card-back">
+                    <div class="stripe"></div>
+                    <div class="cvv" id="cardCVV">CVV</div>
+                </div>
+
+            </div>
+        </div>
+
+        <form>
+            <div class="inputBox">
+                <span>Card Number</span>
+                <input id="numberInput">
+            </div>
+
+            <div class="inputBox">
+                <span>Card Holder</span>
+                <input id="nameInput">
+            </div>
+
+            <div class="flex">
+                <div class="inputBox">
+                    <span>Month</span>
+                    <select id="monthInput">
+                        <option>MM</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <span>Year</span>
+                    <select id="yearInput">
+                        <option>YY</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <span>CVV</span>
+                    <input id="cvvInput">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

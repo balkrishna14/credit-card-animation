@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0d;
+}
+
+.container {
+    width: 360px;
+}
+
+.card {
+    height: 220px;
+    perspective: 1200px;
+    margin-bottom: 22px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 20px;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background: linear-gradient(120deg, #374a57, #4b4f8c, #6a3db8);
+    color: white;
+}
+
+.card-back {
+    background: #2a2a2a;
+    transform: rotateY(180deg);
+}
+
+.chip {
+    margin-top: 25px;
+    width: 52px;
+    height: 40px;
+
+}
+
+.card-number {
+    margin-top: 35px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stripe {
+    height: 42px;
+    background: black;
+    margin-top: 10px;
+}
+
+.cvv {
+    margin-top: 32px;
+    background: white;
+    color: black;
+    padding: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.inputBox {
+    margin-bottom: 15px;
+}
+
+.inputBox span {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.inputBox input,
+.inputBox select {
+    width: 100%;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
