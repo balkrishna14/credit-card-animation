@@ -9,6 +9,7 @@ const cardNumber = document.getElementById("cardNumber");
 const cardHolder = document.getElementById("cardHolder");
 const cardExpiry = document.getElementById("cardExpiry");
 const cardCVV = document.getElementById("cardCVV");
+const card = document.querySelector(".card");
 
 let isFlipped = false;
 
@@ -38,6 +39,11 @@ const flipCard = function (state) {
         isFlipped ? "rotateY(180deg)" : "rotateY(0deg)";
 };
 
+const toggleFlip = function () {
+    if (document.activeElement === cvvInput) return;
+    flipCard(!isFlipped);
+};
+
 const updateCVV = function () {
     let value = cvvInput.value.replace(/\D/g, "");
     value = value.substring(0, 3);
@@ -49,12 +55,16 @@ nameInput.addEventListener("input", updateName);
 monthInput.addEventListener("change", updateExpiry);
 yearInput.addEventListener("change", updateExpiry);
 
+
 cvvInput.addEventListener("focus", function () {
     flipCard(true);
 });
+
+
 
 cvvInput.addEventListener("blur", function () {
     flipCard(false);
 });
 
 cvvInput.addEventListener("input", updateCVV);
+card.addEventListener("click", toggleFlip);
